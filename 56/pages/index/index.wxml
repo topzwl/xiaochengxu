@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class='banner'>
+  <view class='todayNew banner-top'><view class='left'>今日上新</view><p class='bottom'>每日新券优先抢</p><image src='../images/i.jpg'></image></view>
+  <view class='hot banner-top'><view class='midlle'>聚划算</view><text class='bottom'>聚划算宝贝排行</text><image src='../images/i.jpg'></image></view>
+  <view class='brand banner-top'><view class='right'>品牌券</view><text class='bottom'>知名品牌大额券</text><image src='../images/i.jpg'></image></view>
+</view>
+<view>
+<scroll-view class="swiper-tab" scroll-x="true" scroll-left="{{scrollLeft}}">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">精选</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">女装</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">家居家装</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">数码家电</view>
+  <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">母婴</view>
+  <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">食品</view>
+  <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">鞋包配饰</view>
+  <view class="swiper-tab-list {{currentTab==7 ? 'on' : ''}}" data-current="7" bindtap="swichNav">美妆个护</view>
+  <view class="swiper-tab-list {{currentTab==8 ? 'on' : ''}}" data-current="8" bindtap="swichNav">男装</view>
+  <view class="swiper-tab-list {{currentTab==9 ? 'on' : ''}}" data-current="9" bindtap="swichNav">内衣</view>
+  <view class="swiper-tab-list {{currentTab==10 ? 'on' : ''}}" data-current="10" bindtap="swichNav">运动户外</view>
+  </scroll-view>
+</view>
+
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="switchTab">
+  <!-- 精选 -->
+  <!-- <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8,9,10]}}"> -->
+ 
+    <view wx:for="{{arr}}" >
+      <view class='row'>
+        <image class='img' src='{{item.pictUrl}}'></image>
+        <view class='content'>{{item.nick}}</view>
+        <view class='orig'>{{item.reservePrice}}</view>
+         <view class='num'>销售{{item.biz30day}}件</view>
+        <view class='money'><text class='coup'><text class='coup_left'>券</text> {{item.couponAmount}}</text>惊爆价￥<text class='money_1'>{{item.zkPrice}}</text></view>
+      </view>
+      <view class='clear'></view>
+    </view>
+  <!-- </swiper-item> -->
+  
+  <!-- 女装 -->
+  <swiper-item>
+    <view wx:for="{{arra}}" >
+      <view class='row'>
+        <image class='img' src='{{item.img}}'></image>
+        <view class='content'>{{item.con}}</view>
+        <view class='orig'>{{item.orignal}}</view>
+         <view class='num'>销售{{item.number}}件</view>
+      <view class='money'><text class='coup'><text class='coup_left'>券</text> {{item.coupons}}</text>惊爆价￥<text class='money_1'>{{item.money}}</text></view>
+      </view>
+      <view class='clear'></view>
+    </view>
+  </swiper-item>
+  <!-- 家居 -->
+  <swiper-item>
+    <view wx:for="{{arra}}" >
+      <view class='row'>
+        <image class='img' src='{{item.img}}'></image>
+        <view class='content'>{{item.con}}</view>
+         <view class='orig'>{{item.orignal}}</view>
+          <view class='num'>{{item.number}}</view>
+        <view class='money'><text class='coup'><text class='coup_left'>券</text> {{item.coupons}}</text>惊爆价￥<text class='money_1'>{{item.money}}</text></view>
+      </view>
+      <view class='clear'></view>
+    </view>
+  </swiper-item>
+  <!-- 数码 -->
+  <swiper-item>
+    <view wx:for="{{arra}}" >
+      <view class='row'>
+        <image class='img' src='{{item.img}}'></image>
+        <view class='content'>{{item.con}}</view>
+         <view class='orig'>{{item.orignal}}</view>
+        <view class='money'><text class='coup'><text class='coup_left'>券</text> {{item.coupons}}</text>惊爆价￥<text class='money_1'>{{item.money}}</text></view>
+      </view>
+      <view class='clear'></view>
+    </view>
+  </swiper-item>
+</swiper>

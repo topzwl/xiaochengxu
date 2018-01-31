@@ -1,0 +1,141 @@
+/**index.wxss**/
+
+.banner {
+  width: 100%;
+  height: 220rpx;
+  display: flex;  
+  flex-direction: row;
+  text-align: center;
+  font-size: 28rpx; 
+  justify-content: space-around;
+}
+.banner-top{
+  width: 33.33%
+}
+.banner-top image{
+  height: 120rpx;
+  width: 80%;
+  margin-top: 20rpx;
+}
+.left{
+  color: #ff5000;  
+}
+.midlle{
+  color: #e32b53;
+}
+.right{
+  color: #d58e53;
+}
+.left,.midlle,.right{
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.bottom{
+  color: #9d9d9d;
+}
+.banner.banner-top{
+  align-items: stretch;
+}
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  text-align: center;
+  line-height: 80rpx;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  white-space: nowrap; 
+  /* z-index: 99; */
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  margin:0 40rpx;
+  color: #777;
+}
+.on{
+  position: relative;
+}
+.on:after {
+  color: red;
+  border-bottom: 5rpx solid red;
+  content: "";
+  display: block;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+}
+.row {
+  margin-bottom: 20rpx;
+ position:relative;
+}
+.img {
+  width: 30%;
+  height: 205rpx;
+  /* background: #eee; */
+  float: left;
+}
+.content {
+  width: 66%;
+  height: 100rpx;
+  float: right;
+   padding: 15rpx 2%;
+   font-size: 32rpx;
+  /* background: red; */
+}
+.money{
+width: 66%;
+float:right;
+ padding: 15rpx 2%;
+font-size: 25rpx;
+color:#666;
+}
+.money_1{
+  font-size: 40rpx;
+  color:#f40;
+}
+.coup{
+
+  font-size: 23rpx;
+  border: 1rpx solid #f40;
+  margin-right:10rpx ;
+  padding-right:5rpx;
+  color:#f40;
+}
+.coup_left{
+  
+    display: inline-block;
+    font-size: 23rpx;
+    padding: 0 10rpx;
+    color: #fff;
+    background: #f50;
+    text-align: center;
+}
+.orig{
+  position:absolute;
+  top:95rpx; left:230rpx;
+  width: 100rpx;
+  font-size: 25rpx;
+  height:50rpx;
+  color: #666;
+  padding:15rpx 2%;
+  text-decoration-line: line-through;
+}
+.num{
+  position:absolute;
+  top:95rpx; right:10rpx;
+  width: 200rpx;
+  font-size: 25rpx;
+  height:50rpx;
+  color: #666;
+  padding:15rpx 2%;
+ 
+}
